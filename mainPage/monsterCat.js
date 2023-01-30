@@ -1,22 +1,33 @@
-//마우스 올렸을 떄 txt 색상 변하게 하기
+let btn1 = document.querySelector(".btn1");
+// console.log(btn1);
+// console.log(btn1.children);
 
-let button = document.querySelector(".buttons");
+let btn2 = document.querySelector(".btn2");
 
-button.addEventListener(
-  "mouseover",
-  (e) => {
-    e.target.style.color = "black";
-  },
-  false
-);
+btn1.addEventListener("mouseover", () => {
+  for (let el of btn1.children) {
+    console.log(el);
+    el.style.color = "black";
+  }
+});
 
-button.addEventListener(
-  "mouseout",
-  (e) => {
-    e.target.style.color = "white";
-  },
-  false
-);
+btn1.addEventListener("mouseout", () => {
+  for (let el of btn1.children) {
+    console.log(el);
+    el.style.color = "white";
+  }
+});
 
-// 이벤트 타겟 (버튼) 영역에 hover하면 다 적용되는게 아니라, span 위치까지 가야 변경됨.
-// 묶어서 변경할 수 있는 방법은?
+btn2.addEventListener("mouseover", () => {
+  for (let el of btn1.children) {
+    console.log(el);
+    el.style.color = "black";
+  }
+});
+
+btn2.addEventListener("mouseout", () => {
+  for (let el of btn1.children) {
+    console.log(el);
+    el.style.color = "white";
+  }
+});
